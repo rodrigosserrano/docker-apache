@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  apache:
+    build: .
+    container_name: my-apache-app
+    user: root
+    network_mode: host
+#    ports:
+#      - '8000:80'
+    volumes: 
+      - ./website:/usr/local/apache2/htdocs
