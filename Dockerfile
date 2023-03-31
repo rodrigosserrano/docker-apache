@@ -1,3 +1,2 @@
-FROM httpd:latest
-RUN echo "ServerName localhost" >> /usr/local/apache2/conf/httpd.conf
-#CMD apachectl -DFOREGROUND
+FROM httpd:2.4
+COPY ./conf/httpd.conf /usr/local/apache2/conf/httpd.conf
